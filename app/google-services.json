@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "830179990676",
+    "project_id": "testclounema",
+    "storage_bucket": "testclounema.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830179990676:android:713512aefd1e54a778a881",
+        "android_client_info": {
+          "package_name": "com.example.clounema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830179990676-l6gn7lfi9fvv5h5fgu78prtr5p91as7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIwjs7nRQL0ePw9diMzTNCSSp4VG17sxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830179990676-l6gn7lfi9fvv5h5fgu78prtr5p91as7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

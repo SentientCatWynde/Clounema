@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Clounema</string>
+    <string name="user_name">Admin</string>
+    <string name="user_email">admin@gmail.com</string>
+    <string name="synopsis">When Thor\'s evil brother, Loki (Tom Hiddleston), gains access to the unlimited power of the energy cube called the Tesseract, Nick Fury (Samuel L. Jackson), director of S.H.I.E.L.D., initiates a superhero recruitment effort to defeat the unprecedented threat to Earth. Joining Fury\'s "dream team" are Iron Man (Robert Downey Jr.), Captain America (Chris Evans), the Hulk (Mark Ruffalo), Thor (Chris Hemsworth), the Black Widow (Scarlett Johansson) and Hawkeye (Jeremy Renner).</string>
+    <string name="movie_title1">Avengers</string>
+    <string name="movie_title2">Deadpool 2</string>
+    <string name="movie_title3">Joker</string>
+    <string name="movie_title4">Wonder Woman</string>
+    <string name="movie_title5">Doraemon Stand by Me</string>
+    <string name="movie_year1">2012</string>
+    <string name="movie_year2">2018</string>
+    <string name="movie_year3">2019</string>
+    <string name="movie_year4">2017</string>
+    <string name="movie_year5">2014</string>
+    <string name="sign_in">Masuk</string>
+    <string name="email_address">Masukan email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="lupa_password">Lupa Kata Sandi?</string>
+    <string name="dont_have_account">Tidak punya akun?</string>
+    <string name="sign_up">Buat akun</string>
+    <string name="login_with">atau</string>
+    <string name="google">Daftar dengan Google</string>
+    <string name="username">Nama pengguna</string>
+    <string name="upload_photo">Upload Photo</string>
+    <string name="save_continue">Simpan dan Lanjutkan</string>
+    <string name="upload_nanti">Upload Nanti</string>
+    <string name="ob1_title">Menonton movie terbaru tidak pernah semudah ini</string>
+    <string name="ob1_desc">Movie yang sedang tayang di bioskop kini dapat anda nikmati di dalam genggaman anda</string>
+    <string name="ob2_title">Nonton movie favorit anda tanpa batasan</string>
+    <string name="ob2_desc">Nikmati movie favorit anda kapanpun tanpa takut kehabisan kursi</string>
+    <string name="ob3_title">Semua film yang tayang adalah yang terbaru</string>
+    <string name="ob3_desc">Hilangkan rasa bosan dengan menikmati semua film terbaru yang sedang tayang di bioskop</string>
+
+</resources>
