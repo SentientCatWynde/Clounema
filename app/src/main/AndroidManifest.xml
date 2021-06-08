@@ -12,6 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Clounema">
+        <activity android:name=".MovieDetailings.SBMDetailActivity"></activity>
+        <activity android:name=".MovieDetailings.WWDetailsActivity" />
+        <activity android:name=".MovieDetailings.DeadpoolDetailActivity" />
+        <activity android:name=".MovieDetailings.JokerDetailActivity" />
         <activity android:name=".PilihJadwal" />
         <activity android:name=".MovieDetails" />
         <activity android:name=".Onboarding.OnBoardingThree" />

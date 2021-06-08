@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetails"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie Trailer"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:fontFamily="@font/poppins_bold"/>
+
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            app:shapeAppearanceOverlay="@style/roundedImageView">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/mdTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/movie_title5"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/mdYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/movie_year5"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sinopsis"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/mdSino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/synopsis5"
+            android:textSize="12dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Movie Director"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins_bold"/>
+
+        <TextView
+            android:id="@+id/mdDirector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/director5"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_pilih_jadwal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:text="PILIH JADWAL"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/muffin_btn"/>
+
+</LinearLayout>

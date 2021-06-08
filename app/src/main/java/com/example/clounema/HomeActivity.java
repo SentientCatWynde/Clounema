@@ -15,6 +15,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.clounema.MovieDetailings.DeadpoolDetailActivity;
+import com.example.clounema.MovieDetailings.JokerDetailActivity;
+import com.example.clounema.MovieDetailings.SBMDetailActivity;
+import com.example.clounema.MovieDetailings.WWDetailsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -149,22 +153,20 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
-                intent.putExtra("glSwitch", 1);
                 startActivity(intent);
             }
         });
         poster2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
-                intent.putExtra("glSwitch", 2);
+                Intent intent = new Intent(HomeActivity.this, JokerDetailActivity.class);
                 startActivity(intent);
             }
         });
         poster3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, DeadpoolDetailActivity.class);
                 intent.putExtra("glSwitch", 3);
                 startActivity(intent);
             }
@@ -172,7 +174,7 @@ public class HomeActivity extends AppCompatActivity {
         poster4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, WWDetailsActivity.class);
                 intent.putExtra("glSwitch", 4);
                 startActivity(intent);
             }
@@ -180,7 +182,7 @@ public class HomeActivity extends AppCompatActivity {
         poster5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, SBMDetailActivity.class);
                 intent.putExtra("glSwitch", 5);
                 startActivity(intent);
             }
@@ -197,7 +199,7 @@ public class HomeActivity extends AppCompatActivity {
         poster_ic2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, JokerDetailActivity.class);
                 intent.putExtra("glSwitch", 2);
                 startActivity(intent);
             }
@@ -205,7 +207,7 @@ public class HomeActivity extends AppCompatActivity {
         poster_ic3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, DeadpoolDetailActivity.class);
                 intent.putExtra("glSwitch", 3);
                 startActivity(intent);
             }
@@ -214,7 +216,7 @@ public class HomeActivity extends AppCompatActivity {
         poster_ic4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, WWDetailsActivity.class);
                 intent.putExtra("glSwitch", 4);
                 startActivity(intent);
             }
@@ -222,7 +224,7 @@ public class HomeActivity extends AppCompatActivity {
         poster_ic5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, MovieDetails.class);
+                Intent intent = new Intent(HomeActivity.this, SBMDetailActivity.class);
                 intent.putExtra("glSwitch", 5);
                 startActivity(intent);
             }

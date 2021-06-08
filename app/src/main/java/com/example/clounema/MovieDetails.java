@@ -21,21 +21,19 @@ public class MovieDetails extends AppCompatActivity {
 
     private Button pilihJadwal;
     private int toggler = 0;
-    private DatabaseReference dbRef;
-    private TextView mdTitle, mdYear, mdSino, mdDirector;
-    private String kanppai;
+//    private DatabaseReference dbRef;
+//    private TextView mdTitle, mdYear, mdSino, mdDirector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_details);
 
-        mdDirector = findViewById(R.id.mdDirector);
-        mdSino = findViewById(R.id.mdSino);
-        mdTitle = findViewById(R.id.mdTitle);
-        mdYear = findViewById(R.id.mdYear);
+//        mdDirector = findViewById(R.id.mdDirector);
+//        mdSino = findViewById(R.id.mdSino);
+//        mdTitle = findViewById(R.id.mdTitle);
+//        mdYear = findViewById(R.id.mdYear);
 
-        toggler = getIntent().getIntExtra("glSwitch", 0);
         // dbRef = FirebaseDatabase.getInstance().getReference("Movie");
 
         Movie mv = new Movie();
@@ -46,25 +44,25 @@ public class MovieDetails extends AppCompatActivity {
 //        dbRef = FirebaseDatabase.getInstance().getReference();
 
 
-        switch (toggler){
-            case 1:
-                // Read Avengers specifically
-                break;
-            case 2:
-                // Read Joker specifically
-                break;
-            case 3:
-                // Read Deadpool specifically
-                break;
-            case 4:
-                // Read Wonder Woman specifically
-                break;
-            case 5:
-                // Read StandByMe specifically
-                break;
-
-        }
-        Toast.makeText(MovieDetails.this, "Title: " + kanppai, Toast.LENGTH_SHORT).show();
+//        switch (toggler){
+//            case 1:
+//                // Read Avengers specifically
+//                break;
+//            case 2:
+//                // Read Joker specifically
+//                break;
+//            case 3:
+//                // Read Deadpool specifically
+//                break;
+//            case 4:
+//                // Read Wonder Woman specifically
+//                break;
+//            case 5:
+//                // Read StandByMe specifically
+//                break;
+//
+//        }
+        //Toast.makeText(MovieDetails.this, "Title: " + kanppai, Toast.LENGTH_SHORT).show();
 
         pilihJadwal = findViewById(R.id.btn_pilih_jadwal);
         pilihJadwal.setOnClickListener(new View.OnClickListener() {
