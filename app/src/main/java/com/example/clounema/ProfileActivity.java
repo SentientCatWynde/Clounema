@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class ProfileActivity extends AppCompatActivity {
 
     private ImageView backBtn;
-    TextView logoutBtn, displayName, displayEmail, editProfile;
+    TextView logoutBtn, editProfile;
     private FirebaseAuth mAuth;
     private DatabaseReference root;
     private FirebaseUser user;
@@ -33,8 +33,6 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        displayName = findViewById(R.id.userName);
-        displayEmail = findViewById(R.id.userEmail);
         backBtn = findViewById(R.id.arrow_back);
         logoutBtn = findViewById(R.id.tv_logout);
         editProfile = findViewById(R.id.btn_edit_profile);
@@ -45,8 +43,8 @@ public class ProfileActivity extends AppCompatActivity {
         root = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        //final TextView nameTextView = findViewById(R.id.userName);
-        //final TextView emailTextView = findViewById(R.id.userEmail);
+        final TextView nameTextView = findViewById(R.id.userName);
+        final TextView emailTextView = findViewById(R.id.userEmail);
 
         root.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -57,8 +55,8 @@ public class ProfileActivity extends AppCompatActivity {
                     String fullname = userProfile.name;
                     String email = userProfile.email;
 
-                    displayName.setText(fullname);
-                    displayEmail.setText(email);
+                    nameTextView.setText(fullname);
+                    emailTextView.setText(email);
                 }
             }
 
@@ -69,11 +67,11 @@ public class ProfileActivity extends AppCompatActivity {
         });
 
         //retrieve data from google account
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        /*GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if(account != null){
             displayName.setText(account.getDisplayName());
             displayEmail.setText(account.getEmail());
-        }
+        }*/
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
