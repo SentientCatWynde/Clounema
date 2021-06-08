@@ -35,8 +35,8 @@ import java.util.HashMap;
 public class SignUpActivity extends AppCompatActivity{
 
     private Button signUpBtn, signInGoogle;
-    private static final int RC_SIGN_IN = 123;
-    private GoogleSignInClient mGoogleSignIn;
+    //private static final int RC_SIGN_IN = 123;
+    //private GoogleSignInClient mGoogleSignIn;
     private EditText mEmail, mPass, mName;
     private FirebaseAuth mAuth;
     private FirebaseDatabase db;
@@ -51,7 +51,7 @@ public class SignUpActivity extends AppCompatActivity{
         mName = findViewById(R.id.etName);
         mEmail = findViewById(R.id.etEmail);
         mPass = findViewById(R.id.etPass);
-        signInGoogle = findViewById(R.id.btn_google);
+        //signInGoogle = findViewById(R.id.btn_google);
         signUpBtn = findViewById(R.id.btn_sign_up1);
 
         // Write a message to the database
@@ -59,19 +59,19 @@ public class SignUpActivity extends AppCompatActivity{
         DatabaseReference root = db.getReference().child("Users");
 
         mAuth = FirebaseAuth.getInstance();
-        createRequest();
+        //createRequest();
         signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createUser();
             }
         });
-        signInGoogle.setOnClickListener(new View.OnClickListener() {
+        /*signInGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 signInGoogle();
             }
-        });
+        });*/
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,7 +80,7 @@ public class SignUpActivity extends AppCompatActivity{
             }
         });
     }
-    private void createRequest(){
+    /*private void createRequest(){
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -131,19 +131,12 @@ public class SignUpActivity extends AppCompatActivity{
             startActivity(new Intent(SignUpActivity.this, HomeActivity.class));
             finish();
         }
-    }
+    }*/
 
     private void createUser() {
-        String name = mName.getText().toString();
-        String email = mEmail.getText().toString();
-        String pass = mPass.getText().toString();
-
-        HashMap<String, String> userMap = new HashMap<>();
-
-        userMap.put("name", name);
-        userMap.put("email", email);
-
-        root.push().setValue(userMap);
+        String name = mName.getText().toString().trim();
+        String email = mEmail.getText().toString().trim();
+        String pass = mPass.getText().toString().trim();
 
         if(!name.isEmpty()) {
             mName.setError("Name is required!");
