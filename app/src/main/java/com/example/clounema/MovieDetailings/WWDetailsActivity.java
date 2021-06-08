@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.example.clounema.PilihJadwal;
 import com.example.clounema.R;
@@ -24,10 +27,22 @@ public class WWDetailsActivity extends AppCompatActivity {
     private ImageView mvDposter;
     private StorageReference storageRef = FirebaseStorage.getInstance().getReference();
     private StorageReference posterTemp;
+    private VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_w_w_details);
+
+        videoView = findViewById(R.id.mvTrailer);
+        String vidPath = "android.resource://" + getPackageName() + "/" + R.raw.ww_trailer;
+
+        Uri uri = Uri.parse(vidPath);
+        videoView.setVideoURI(uri);
+        // videoView.start();
+
+        MediaController mvController = new MediaController(this);
+        videoView.setMediaController(mvController);
+        mvController.setAnchorView(videoView);
 
         mvDposter = findViewById(R.id.mvDposter);
         posterTemp = storageRef.child("Movie/WonderWoman.jpg");

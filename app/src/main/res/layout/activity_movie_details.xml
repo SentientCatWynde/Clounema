@@ -16,11 +16,17 @@
         android:textSize="25dp"
         android:fontFamily="@font/poppins_bold"/>
 
-    <VideoView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp" />
+        android:layout_height="wrap_content">
+        <VideoView
+            android:id="@+id/mvTrailer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+    </FrameLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,14 +105,14 @@
             android:text="Joss Whedon"
             android:textSize="12dp"
             android:fontFamily="@font/poppins"/>
-
     </LinearLayout>
 
     <Button
         android:id="@+id/btn_pilih_jadwal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+
         android:text="PILIH JADWAL"
         android:textColor="@color/colorWhite"
         android:background="@drawable/muffin_btn"/>
