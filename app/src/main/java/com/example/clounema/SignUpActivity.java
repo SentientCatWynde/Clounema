@@ -1,36 +1,23 @@
 package com.example.clounema;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity{
 
@@ -39,8 +26,8 @@ public class SignUpActivity extends AppCompatActivity{
     //private GoogleSignInClient mGoogleSignIn;
     private EditText mEmail, mPass, mName;
     private FirebaseAuth mAuth;
-    private FirebaseDatabase db;
-    private DatabaseReference root;
+    //private FirebaseDatabase db;
+    //private DatabaseReference root;
     private ImageView backBtn;
 
     @Override
@@ -48,15 +35,15 @@ public class SignUpActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         backBtn = findViewById(R.id.btnBack);
-        mName = findViewById(R.id.etName);
-        mEmail = findViewById(R.id.etEmail);
-        mPass = findViewById(R.id.etPass);
+        mName = findViewById(R.id.input_name);
+        mEmail = findViewById(R.id.email_signup);
+        mPass = findViewById(R.id.pass_signup);
         //signInGoogle = findViewById(R.id.btn_google);
         signUpBtn = findViewById(R.id.btn_sign_up1);
 
         // Write a message to the database
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference root = db.getReference().child("Users");
+        /*FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference root = db.getReference().child("Users");*/
 
         mAuth = FirebaseAuth.getInstance();
         //createRequest();
@@ -138,21 +125,22 @@ public class SignUpActivity extends AppCompatActivity{
         String email = mEmail.getText().toString().trim();
         String pass = mPass.getText().toString().trim();
 
-        if(!name.isEmpty()) {
+        if(name.isEmpty()) {
             mName.setError("Name is required!");
             mName.requestFocus();
             return;
         }
-        if(!email.isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if(email.isEmpty() && !Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             mEmail.setError("Please provide a valid email");
             mEmail.requestFocus();
             return;
         }
-        if(!pass.isEmpty() && pass.length() < 6) {
+        if(pass.isEmpty() && pass.length() < 6) {
             mPass.setError("Password at least 6 characters");
             mPass.requestFocus();
             return;
         }
+        Log.e("error",name);
         mAuth.createUserWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -166,14 +154,16 @@ public class SignUpActivity extends AppCompatActivity{
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(SignUpActivity.this, "User has been registered successfully!", Toast.LENGTH_LONG).show();
+                                        //FirebaseAuth.getInstance();
+                                        finish();
                                     //redirect to login activity
                                     }else {
-                                        Toast.makeText(SignUpActivity.this,"Failed to register", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(SignUpActivity.this,"Failed to register1", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
                         }else {
-                            Toast.makeText(SignUpActivity.this,"Failed to register", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUpActivity.this,"Failed to register2", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

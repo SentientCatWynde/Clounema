@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "830179990676",
-    "project_id": "testclounema",
-    "storage_bucket": "testclounema.appspot.com"
+    "project_number": "557986135819",
+    "project_id": "projectclounema",
+    "storage_bucket": "projectclounema.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:830179990676:android:713512aefd1e54a778a881",
+        "mobilesdk_app_id": "1:557986135819:android:257948d80c942784fbac0e",
         "android_client_info": {
           "package_name": "com.example.clounema"
         }
       },
       "oauth_client": [
         {
-          "client_id": "830179990676-l6gn7lfi9fvv5h5fgu78prtr5p91as7m.apps.googleusercontent.com",
+          "client_id": "557986135819-klejmv2dj0bjmu5gqq0l5vj1b1057i2a.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDIwjs7nRQL0ePw9diMzTNCSSp4VG17sxU"
+          "current_key": "AIzaSyDhYxz8v1PoXfhXbKcGoq_61OThQFcRnjw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "830179990676-l6gn7lfi9fvv5h5fgu78prtr5p91as7m.apps.googleusercontent.com",
+              "client_id": "557986135819-klejmv2dj0bjmu5gqq0l5vj1b1057i2a.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

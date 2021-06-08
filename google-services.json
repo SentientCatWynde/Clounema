@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "776127376420",
+    "firebase_url": "https://clounema-79c07-default-rtdb.firebaseio.com",
+    "project_id": "clounema-79c07",
+    "storage_bucket": "clounema-79c07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776127376420:android:5a1fe7ece8b2ce93a0bcb1",
+        "android_client_info": {
+          "package_name": "com.bzd.clounema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776127376420-m361g4kcnhgk0cdqj4vja799k5396htt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5QyrbPnl4BV4o0dmziraIEc1b3Z6C4nQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "776127376420-m361g4kcnhgk0cdqj4vja799k5396htt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
