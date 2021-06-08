@@ -6,7 +6,6 @@ ANGGOTA:
 (00000033093) - Muhammad Zhikri
 (00000029584) - Gusti Bagus Bill Isai Gian
 
-Link Source: https://github.com/SentientCatWynde/Clounema/tree/main/app/src/main/java/com/example/clounema
 APK terkait dalam zip
 
 Aplikasi Clounema adalah aplikasi untuk menjadi bioskop online dalam hp
